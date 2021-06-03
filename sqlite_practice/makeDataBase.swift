@@ -19,6 +19,12 @@ class makeDataBaseVC: UIViewController {
         
         let DB_path = DOC_path.appendingPathComponent("db_pracitce").path
         
+        if fileMGR.fileExists(atPath: DB_path) == false { // DB_Path 에 파일이 있는지 없는지 체크
+            //만약에 없으면
+            //앱 번들에 있는 db_pracitce 파일을 가져와 DB_Path에 붙여넣어줍니다.
+            let dbSource = Bundle.main.path(forResource: "db_practice", ofType: "sqlite")
+            try! fileMGR.copyItem(atPath: dbSource!, toPath: DB_path)
+        }
         
         let SQL = "create table if not EXISTS HoonIOS (num INTEGER, age INTEGER)"
         
