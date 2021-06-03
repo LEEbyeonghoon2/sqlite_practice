@@ -9,21 +9,24 @@
 /* Begin PBXBuildFile section */
 		BC310B8C2667693400530A14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC310B8B2667693400530A14 /* AppDelegate.swift */; };
 		BC310B8E2667693400530A14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC310B8D2667693400530A14 /* SceneDelegate.swift */; };
-		BC310B902667693400530A14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC310B8F2667693400530A14 /* ViewController.swift */; };
 		BC310B932667693400530A14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC310B912667693400530A14 /* Main.storyboard */; };
 		BC310B952667693500530A14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC310B942667693500530A14 /* Assets.xcassets */; };
 		BC310B982667693500530A14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC310B962667693500530A14 /* LaunchScreen.storyboard */; };
+		BC310BA1266769A900530A14 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BC310BA0266769A900530A14 /* libsqlite3.tbd */; };
+		BC310BA426676D4E00530A14 /* makeDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC310BA326676D4E00530A14 /* makeDataBase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BC310B882667693400530A14 /* sqlite_practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sqlite_practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC310B8B2667693400530A14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC310B8D2667693400530A14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BC310B8F2667693400530A14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BC310B922667693400530A14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC310B942667693500530A14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC310B972667693500530A14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC310B992667693500530A14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC310BA0266769A900530A14 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		BC310BA2266769F800530A14 /* sqlite_practice-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sqlite_practice-Bridging-Header.h"; sourceTree = "<group>"; };
+		BC310BA326676D4E00530A14 /* makeDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makeDataBase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC310BA1266769A900530A14 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +46,7 @@
 			children = (
 				BC310B8A2667693400530A14 /* sqlite_practice */,
 				BC310B892667693400530A14 /* Products */,
+				BC310B9F266769A900530A14 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +63,22 @@
 			children = (
 				BC310B8B2667693400530A14 /* AppDelegate.swift */,
 				BC310B8D2667693400530A14 /* SceneDelegate.swift */,
-				BC310B8F2667693400530A14 /* ViewController.swift */,
+				BC310BA326676D4E00530A14 /* makeDataBase.swift */,
 				BC310B912667693400530A14 /* Main.storyboard */,
 				BC310B942667693500530A14 /* Assets.xcassets */,
 				BC310B962667693500530A14 /* LaunchScreen.storyboard */,
+				BC310BA2266769F800530A14 /* sqlite_practice-Bridging-Header.h */,
 				BC310B992667693500530A14 /* Info.plist */,
 			);
 			path = sqlite_practice;
+			sourceTree = "<group>";
+		};
+		BC310B9F266769A900530A14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC310BA0266769A900530A14 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +151,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC310B902667693400530A14 /* ViewController.swift in Sources */,
 				BC310B8C2667693400530A14 /* AppDelegate.swift in Sources */,
+				BC310BA426676D4E00530A14 /* makeDataBase.swift in Sources */,
 				BC310B8E2667693400530A14 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +308,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "byeong.sqlite-practice";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "sqlite_practice/sqlite_practice-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -312,6 +327,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "byeong.sqlite-practice";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "sqlite_practice/sqlite_practice-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
