@@ -14,6 +14,7 @@
 		BC310B982667693500530A14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC310B962667693500530A14 /* LaunchScreen.storyboard */; };
 		BC310BA1266769A900530A14 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BC310BA0266769A900530A14 /* libsqlite3.tbd */; };
 		BC310BA426676D4E00530A14 /* makeDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC310BA326676D4E00530A14 /* makeDataBase.swift */; };
+		BC3F73D626686E9A00D3B554 /* db_pracitce in Resources */ = {isa = PBXBuildFile; fileRef = BC3F73D526686E9900D3B554 /* db_pracitce */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		BC310BA0266769A900530A14 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		BC310BA2266769F800530A14 /* sqlite_practice-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sqlite_practice-Bridging-Header.h"; sourceTree = "<group>"; };
 		BC310BA326676D4E00530A14 /* makeDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makeDataBase.swift; sourceTree = "<group>"; };
+		BC3F73D526686E9900D3B554 /* db_pracitce */ = {isa = PBXFileReference; lastKnownFileType = file; path = db_pracitce; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		BC310B8A2667693400530A14 /* sqlite_practice */ = {
 			isa = PBXGroup;
 			children = (
+				BC3F73D526686E9900D3B554 /* db_pracitce */,
 				BC310B8B2667693400530A14 /* AppDelegate.swift */,
 				BC310B8D2667693400530A14 /* SceneDelegate.swift */,
 				BC310BA326676D4E00530A14 /* makeDataBase.swift */,
@@ -141,6 +144,7 @@
 				BC310B982667693500530A14 /* LaunchScreen.storyboard in Resources */,
 				BC310B952667693500530A14 /* Assets.xcassets in Resources */,
 				BC310B932667693400530A14 /* Main.storyboard in Resources */,
+				BC3F73D626686E9A00D3B554 /* db_pracitce in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,13 +19,23 @@ class makeDataBaseVC: UIViewController {
         
         let DB_path = DOC_path.appendingPathComponent("db_pracitce").path
         
+        
         let SQL = "create table if not EXISTS HoonIOS (num INTEGER, age INTEGER)"
         
-        sqlite3_open(DB_path, &db_sqlite3)
-        sqlite3_prepare(db_sqlite3, SQL, -1, &db_sqlite_stmt, nil)
-        sqlite3_step(db_sqlite_stmt)
-        sqlite3_finalize(db_sqlite_stmt)
-        sqlite3_close(db_sqlite3)
+        if sqlite3_open(DB_path, &db_sqlite3) == SQLITE_OK {
+            if sqlite3_prepare(db_sqlite3, SQL, -1, &db_sqlite_stmt, nil) == SQLITE_OK {
+                if sqlite3_step(db_sqlite_stmt) == SQLITE_DONE {
+                    NSLog("DB Succeess")
+                }
+                sqlite3_finalize(db_sqlite_stmt)
+            } else {
+                NSLog("DB Statement Error")
+            }
+            sqlite3_close(db_sqlite3)
+        } else {
+            NSLog("DB Connect Error")
+            return
+        }
         
     }
 }
